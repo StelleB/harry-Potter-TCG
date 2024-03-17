@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="character"></div>
+    <script>
+        function fetchCharacter() {
+            let url = window.location.search
+            let slug = new URLSearchParams(url).get('slug')
+            return fetch("https://hp-api.lainocs.fr/characters/" + slug)
+                .then((response) => response.json())
+        }
+        
+        async function displayCharacter() {
+            const character = await fetchCharacter()
+                document.querySelector('#character').innerHTML += `
+                <h2>${character.name}</h2>
+                <img id="image" src="${character.image}" alt="${character.name}"
+                <p>${character.house}</p>
+                <p>${character.actor}</p>
+            
+            `
+            
+        }
+
+        displayCharacter()
+    </script>
+</body>
+</html>
