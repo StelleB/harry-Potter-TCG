@@ -1,0 +1,1 @@
+Bonjour Nicolas, voici mon rendu harry potter. je sais qu'il n'est pas très beau mais étant donné que l'axe coding est mon deuxième choix, je n'ai pas vraiment eu le temps de mettre en place un joli site pour le projet d'axe, cela m'aurait pris trop de temps. J'espère que vous comprendrez.
